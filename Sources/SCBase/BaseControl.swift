@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  BaseControl.swift
 //  
 //
 //  Created by kim sunchul on 2022/06/03.
@@ -17,7 +17,7 @@ open class BaseControl: UIControl, ViewLifeCycle, MakeLayout {
 
   // MARK: - Init
 
-  init() {
+  public init() {
     defer {
       self.viewDidInit()
       self.makeLayout()
@@ -25,7 +25,7 @@ open class BaseControl: UIControl, ViewLifeCycle, MakeLayout {
     super.init(frame: .zero)
   }
 
-  override init(frame: CGRect) {
+  public override init(frame: CGRect) {
     defer {
       self.viewDidInit()
       self.makeLayout()

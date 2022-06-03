@@ -18,7 +18,7 @@ open class BaseViewController: UIViewController, ViewLifeCycle, MakeLayout {
 
   // MARK: - Init
 
-  init() {
+  public init() {
     defer {
       self.viewDidInit()
       self.makeLayout()
@@ -26,7 +26,7 @@ open class BaseViewController: UIViewController, ViewLifeCycle, MakeLayout {
     super.init(nibName: nil, bundle: nil)
   }
 
-  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+  public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
     defer {
       self.viewDidInit()
       self.makeLayout()

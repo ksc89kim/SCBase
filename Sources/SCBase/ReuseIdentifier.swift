@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol ReuseIdentifier {
+public protocol ReuseIdentifier {
   static var reuseIdentifier: String { get }
   var reuseIdentifier: String { get }
 }

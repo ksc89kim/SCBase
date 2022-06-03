@@ -28,6 +28,38 @@ open class BaseCollectionView: UICollectionView, ViewLifeCycle, MakeLayout {
   public required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
+
+  // MARK: - Dequeue
+
+  open func dequeueReusableCell<Cell: ReuseIdentifier & UICollectionViewCell>(
+    _ type: Cell.Type,
+    for indexPath: IndexPath
+  ) -> Cell {
+    guard let cell = self.dequeueReusableCell(
+      withReuseIdentifier: type.reuseIdentifier,
+      for: indexPath
+    ) as? Cell else {
+      let message = "dequeue error (\(String(describing: type)))"
+      fatalError(message)
+    }
+    return cell
+  }
+
+  open func dequeueReusableView<View: ReuseIdentifier & UICollectionReusableView>(
+    _ type: View.Type,
+    kind: String,
+    for indexPath: IndexPath
+  ) -> View {
+    guard let view = self.dequeueReusableSupplementaryView(
+      ofKind: kind,
+      withReuseIdentifier: type.reuseIdentifier,
+      for: indexPath
+    ) as? View else {
+      let message = "dequeue error (\(String(describing: type)))"
+      fatalError(message)
+    }
+    return view
+  }
 }
 
 #endif

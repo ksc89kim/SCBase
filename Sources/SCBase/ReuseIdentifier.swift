@@ -13,7 +13,7 @@ public protocol ReuseIdentifier {
 }
 
 
-extension ReuseIdentifier {
+public extension ReuseIdentifier {
 
   static var reuseIdentifier: String {
     return String(describing: self)

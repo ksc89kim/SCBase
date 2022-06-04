@@ -23,8 +23,8 @@ public extension BaseSectionHeaderLayout {
 }
 
 
-public protocol BaseSectionHeader: BaseSectionHeaderLayout {
-
+public protocol BaseSectionHeader {
+  var layout: BaseSectionHeaderLayout { get set }
 }
 
 #endif

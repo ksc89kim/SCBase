@@ -23,8 +23,8 @@ public extension BaseSectionFooterLayout {
 }
 
 
-public protocol BaseSectionFooter: BaseSectionFooterLayout {
-
+public protocol BaseSectionFooter {
+  var layout: BaseSectionFooterLayout { get set }
 }
 
 #endif

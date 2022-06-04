@@ -23,7 +23,8 @@ public extension BaseSectionItemLayout {
 }
 
 
-public protocol BaseSectionItem: ReuseIdentifier, BaseSectionItemLayout {
+public protocol BaseSectionItem: ReuseIdentifier {
+  var layout: BaseSectionItemLayout { get set }
 }
 
 #endif

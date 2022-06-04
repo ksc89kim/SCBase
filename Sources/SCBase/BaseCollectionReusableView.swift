@@ -1,19 +1,23 @@
 //
-//  BaseView.swift
+//  BaseCollectionReusableView.swift
 //  
 //
-//  Created by kim sunchul on 2022/06/03.
+//  Created by kim sunchul on 2022/06/04.
 //
 
 #if canImport(UIKit)
 
 import UIKit
 
-open class BaseView: UIView, ViewLifeCycle, MakeLayout {
+open class BaseCollectionReusableView: UICollectionReusableView, ViewLifeCycle, MakeLayout, ReuseIdentifier {
   
   // MARK: - Property
 
   open var didMakeConstraints: Bool = false
+
+  public static var reuseIdentifier: String {
+    return String(describing: Self.self)
+  }
 
   // MARK: - Init
 
@@ -25,7 +29,7 @@ open class BaseView: UIView, ViewLifeCycle, MakeLayout {
     super.init(frame: .zero)
   }
 
-  public override init(frame: CGRect) {
+  override init(frame: CGRect) {
     defer {
       self.viewDidInit()
       self.makeLayout()

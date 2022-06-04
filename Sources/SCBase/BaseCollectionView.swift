@@ -29,6 +29,22 @@ open class BaseCollectionView: UICollectionView, ViewLifeCycle, MakeLayout {
     fatalError("init(coder:) has not been implemented")
   }
 
+  // MARK: - Life Cycle
+
+  open func viewDidInit() {
+    // override point
+  }
+
+  // MARK: - Layout
+
+  open func addSubViews() {
+    // override point
+  }
+
+  open func makeConstraints() {
+    // override point
+  }
+  
   // MARK: - Dequeue
 
   open func dequeueReusableCell<Cell: ReuseIdentifier & UICollectionViewCell>(

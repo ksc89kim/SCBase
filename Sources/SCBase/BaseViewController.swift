@@ -38,6 +38,21 @@ open class BaseViewController: UIViewController, ViewLifeCycle, MakeLayout {
     fatalError("init(coder:) has not been implemented")
   }
 
+  // MARK: - Life Cycle
+
+  open func viewDidInit() {
+    // override point
+  }
+
+  // MARK: - Layout
+
+  open func addSubViews() {
+    // override point
+  }
+
+  open func makeConstraints() {
+    // override point
+  }
 }
 
 #endif

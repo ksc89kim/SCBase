@@ -42,6 +42,21 @@ open class BaseCollectionViewCell: UICollectionViewCell, ViewLifeCycle, MakeLayo
     fatalError()
   }
 
+  // MARK: - Life Cycle
+
+  open func viewDidInit() {
+    // override point
+  }
+
+  // MARK: - Layout
+
+  open func addSubViews() {
+    // override point
+  }
+
+  open func makeConstraints() {
+    // override point
+  }
 }
 
 #endif

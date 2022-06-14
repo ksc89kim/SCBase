@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>sc_viewcontroller</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import UIKit
+import SCBase
+
+final class &lt;#name#&gt;: BaseViewController {
+
+  // MARK: - Define
+
+  private enum Metric {
+  }
+
+  // MARK: - UI Component
+
+
+  // MARK: - Property
+
+
+  // MARK: - Life Cycle
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
+
+  // MARK: - Layout
+
+  override func addSubViews() {
+    super.addSubViews()
+  }
+
+  override func makeConstraints() {
+    super.makeConstraints()
+  }
+
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>4D3E9930-1B37-4DD2-9BF3-C578F63E5371</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>SCBase</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>BaseViewController</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

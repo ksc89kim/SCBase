@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>sc_footer</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>import UIKit
+import SCBase
+
+struct &lt;#name#&gt;FooterLayout: BaseSectionFooterLayout {
+}
+
+
+struct &lt;#name#&gt;Footer: BaseSectionFooter {
+
+  // MARK: - Property
+
+  var layout: BaseSectionFooterLayout
+
+  // MARK: - Init
+
+  init() {
+    self.layout = &lt;#name#&gt;FooterLayout()
+  }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>1AC4A7AE-8722-4B32-9AF7-BD43E8B1CB24</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>SCBase</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>BaseSectionFooter</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

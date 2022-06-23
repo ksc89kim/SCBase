@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  MakeLayoutType.swift
 //  
 //
 //  Created by kim sunchul on 2022/06/01.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol MakeLayout: AnyObject {
+public protocol MakeLayoutType: AnyObject {
   var didMakeConstraints: Bool { get set }
 
   func addSubViews()
@@ -16,7 +16,7 @@ public protocol MakeLayout: AnyObject {
 }
 
 
-public extension MakeLayout {
+public extension MakeLayoutType {
 
   func makeLayout() {
     self.addSubViews()

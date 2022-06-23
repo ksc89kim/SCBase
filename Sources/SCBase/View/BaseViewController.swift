@@ -10,7 +10,7 @@
 
 import UIKit
 
-open class BaseViewController: UIViewController, MakeLayout {
+open class BaseViewController: UIViewController, MakeLayoutType {
 
   // MARK: - Property
 

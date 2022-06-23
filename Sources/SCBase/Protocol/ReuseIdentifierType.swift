@@ -7,13 +7,13 @@
 
 import Foundation
 
-public protocol ReuseIdentifier {
+public protocol ReuseIdentifierType {
   static var reuseIdentifier: String { get }
   var reuseIdentifier: String { get }
 }
 
 
-public extension ReuseIdentifier {
+public extension ReuseIdentifierType {
 
   static var reuseIdentifier: String {
     return String(describing: self)

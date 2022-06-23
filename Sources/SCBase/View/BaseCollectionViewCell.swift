@@ -10,7 +10,7 @@
 
 import UIKit
 
-open class BaseCollectionViewCell: UICollectionViewCell, ViewLifeCycle, MakeLayout, ReuseIdentifier, BaseSectionConfigure {
+open class BaseCollectionViewCell: UICollectionViewCell, ViewLifeCycling, MakeLayoutType, ReuseIdentifierType, BaseSectionConfigurable {
 
   // MARK: - Property
 
@@ -60,7 +60,7 @@ open class BaseCollectionViewCell: UICollectionViewCell, ViewLifeCycle, MakeLayo
 
   // MARK: - Configure
 
-  open func configure(item: BaseSectionItem) {
+  open func configure(item: BaseSectionItemType) {
     // override point
   }
 }

@@ -1,5 +1,5 @@
 //
-//  BaseSectionHeader.swift
+//  BaseSectionItemType.swift
 //  
 //
 //  Created by kim sunchul on 2022/06/04.
@@ -9,22 +9,22 @@
 
 import UIKit
 
-public protocol BaseSectionHeaderLayout {
+public protocol BaseSectionItemLayoutType {
   func size(collectionViewSize: CGSize) -> CGSize
 }
 
 
-public extension BaseSectionHeaderLayout {
+public extension BaseSectionItemLayoutType {
 
   func size(collectionViewSize: CGSize) -> CGSize {
     return .zero
   }
-  
+
 }
 
 
-public protocol BaseSectionHeader {
-  var layout: BaseSectionHeaderLayout { get set }
+public protocol BaseSectionItemType: ReuseIdentifierType {
+  var layout: BaseSectionItemLayoutType { get set }
 }
 
 #endif

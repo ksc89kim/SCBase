@@ -9,7 +9,7 @@
 
 import UIKit
 
-open class BaseCollectionView: UICollectionView, ViewLifeCycle, MakeLayout {
+open class BaseCollectionView: UICollectionView, ViewLifeCycling, MakeLayoutType {
 
   // MARK: - Property
 
@@ -47,7 +47,7 @@ open class BaseCollectionView: UICollectionView, ViewLifeCycle, MakeLayout {
   
   // MARK: - Dequeue
 
-  open func dequeueReusableCell<Cell: ReuseIdentifier & UICollectionViewCell>(
+  open func dequeueReusableCell<Cell: ReuseIdentifierType & UICollectionViewCell>(
     _ type: Cell.Type,
     for indexPath: IndexPath
   ) -> Cell {
@@ -61,7 +61,7 @@ open class BaseCollectionView: UICollectionView, ViewLifeCycle, MakeLayout {
     return cell
   }
 
-  open func dequeueReusableView<View: ReuseIdentifier & UICollectionReusableView>(
+  open func dequeueReusableView<View: ReuseIdentifierType & UICollectionReusableView>(
     _ type: View.Type,
     kind: String,
     for indexPath: IndexPath

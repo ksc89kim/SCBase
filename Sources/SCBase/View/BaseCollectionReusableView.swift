@@ -9,7 +9,7 @@
 
 import UIKit
 
-open class BaseCollectionReusableView: UICollectionReusableView, ViewLifeCycle, MakeLayout, ReuseIdentifier {
+open class BaseCollectionReusableView: UICollectionReusableView, ViewLifeCycling, MakeLayoutType, ReuseIdentifierType {
   
   // MARK: - Property
 

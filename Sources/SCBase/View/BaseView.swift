@@ -9,7 +9,7 @@
 
 import UIKit
 
-open class BaseView: UIView, ViewLifeCycle, MakeLayout {
+open class BaseView: UIView, ViewLifeCycling, MakeLayoutType {
   
   // MARK: - Property
 

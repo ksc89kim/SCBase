@@ -1,5 +1,5 @@
 //
-//  BaseSectionItem.swift
+//  BaseSectionFooterType.swift
 //  
 //
 //  Created by kim sunchul on 2022/06/04.
@@ -9,22 +9,22 @@
 
 import UIKit
 
-public protocol BaseSectionItemLayout {
+public protocol BaseSectionFooterLayoutType {
   func size(collectionViewSize: CGSize) -> CGSize
 }
 
 
-public extension BaseSectionItemLayout {
+public extension BaseSectionFooterLayoutType {
 
   func size(collectionViewSize: CGSize) -> CGSize {
     return .zero
   }
-
+  
 }
 
 
-public protocol BaseSectionItem: ReuseIdentifier {
-  var layout: BaseSectionItemLayout { get set }
+public protocol BaseSectionFooterType {
+  var layout: BaseSectionFooterLayoutType { get set }
 }
 
 #endif

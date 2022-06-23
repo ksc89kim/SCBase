@@ -1,5 +1,5 @@
 //
-//  BaseSectionFooter.swift
+//  BaseSectionHeader.swift
 //  
 //
 //  Created by kim sunchul on 2022/06/04.
@@ -9,12 +9,12 @@
 
 import UIKit
 
-public protocol BaseSectionFooterLayout {
+public protocol BaseSectionHeaderLayoutType {
   func size(collectionViewSize: CGSize) -> CGSize
 }
 
 
-public extension BaseSectionFooterLayout {
+public extension BaseSectionHeaderLayoutType {
 
   func size(collectionViewSize: CGSize) -> CGSize {
     return .zero
@@ -23,8 +23,8 @@ public extension BaseSectionFooterLayout {
 }
 
 
-public protocol BaseSectionFooter {
-  var layout: BaseSectionFooterLayout { get set }
+public protocol BaseSectionHeaderType {
+  var layout: BaseSectionHeaderLayoutType { get set }
 }
 
 #endif

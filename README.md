@@ -16,7 +16,7 @@ UICollectionReusableView -> BaseCollectionReusableView
 ## Protocol
 
 ```swift
-public protocol MakeLayout: AnyObject {
+public protocol MakeLayoutType: AnyObject {
   var didMakeConstraints: Bool { get set }
 
   func addSubViews()
@@ -24,69 +24,69 @@ public protocol MakeLayout: AnyObject {
   func makeConstraints()
 }
 ```
-- MakeLayout은 Layout 구성을 코드로 할 경우 가독성과 의존성 분리를 위하여 사용하고 싶을때, 채택합니다.
+- MakeLayoutType은 Layout 구성을 코드로 할 경우 가독성과 의존성 분리를 위하여 사용하고 싶을때, 채택합니다.
 - addSubViews() : 자식 뷰들을 추가할때 사용합니다.
 - makeConstraints() : autolayout constraint를 설정할때 사용합니다.
 
 
 ```swift
-public protocol ReuseIdentifier {
+public protocol ReuseIdentifierType {
   static var reuseIdentifier: String { get }
   var reuseIdentifier: String { get }
 }
 ```
-- ReuseIdentifier은 cell 또는 header, footer에서 identifier로 사용하고 싶을때 채택합니다.
+- ReuseIdentifierType은 cell 또는 header, footer에서 identifier로 사용하고 싶을때 채택합니다.
 
 
 ```swift
-public protocol ViewLifeCycle {
+public protocol ViewLifeCycling {
   func viewDidInit()
 }
 ```
-- ViewLifeCycle은 view와 관련된 시점을 알고 싶을때 채택합니다.
+- ViewLifeCycling은 view와 관련된 시점을 알고 싶을때 채택합니다.
 
 
 ```swift
-public protocol BaseSectionLayout {
+public protocol BaseSectionLayoutType {
   func minimumLineSpacing() -> CGFloat
   func minimumInteritemSpacing() -> CGFloat
   func insetForSection() -> UIEdgeInsets
 }
 
-public protocol BaseSection {
-  var header: BaseSectionHeader? { get set }
-  var footer: BaseSectionFooter? { get set }
-  var items: [BaseSectionItem] { get set }
-  var layout: BaseSectionLayout { get set }
+public protocol BaseSectionType {
+  var header: BaseSectionHeaderType? { get set }
+  var footer: BaseSectionFooterType? { get set }
+  var items: [BaseSectionItemType] { get set }
+  var layout: BaseSectionLayoutType { get set }
 }
 
-public protocol BaseSectionFooterLayout {
+public protocol BaseSectionFooterLayoutType {
   func size(collectionViewSize: CGSize) -> CGSize
 }
 
-public protocol BaseSectionFooter {
-  var layout: BaseSectionFooterLayout { get set }
+public protocol BaseSectionFooterType {
+  var layout: BaseSectionFooterLayoutType { get set }
 }
 
-public protocol BaseSectionHeaderLayout {
+public protocol BaseSectionHeaderLayoutType {
   func size(collectionViewSize: CGSize) -> CGSize
 }
 
-public protocol BaseSectionHeader {
+public protocol BaseSectionHeaderType {
   var layout: BaseSectionHeaderLayout { get set }
 }
 
-public protocol BaseSectionItemLayout {
+public protocol BaseSectionItemLayoutType {
   func size(collectionViewSize: CGSize) -> CGSize
 }
 
-public protocol BaseSectionItem: ReuseIdentifier {
-  var layout: BaseSectionItemLayout { get set }
+public protocol BaseSectionItemType: ReuseIdentifierType {
+  var layout: BaseSectionItemLayoutType { get set }
 }
 
 ```
-- BaseSection, BaseSectionHeader, BaseSectionFooter, BaseSectionItem는 컬렉션 뷰의 섹션 데이터 구조 형태와 동일하게 맞추고, 해당 프로토콜로 다형성을 사용하고 싶을때 채택합니다.
-- Layout 형태의 프로토콜은 UICollectionViewDelegateFlowLayout로 커스텀하게 사용하고 싶을때 채택을 진행합니다.
+- BaseSectionType, BaseSectionHeaderType, BaseSectionFooterType, BaseSectionItemType는 컬렉션 뷰의 섹션 데이터 구조 형태와 동일하게 맞추고, 해당 프로토콜로 다형성을 사용하고 싶을때 채택합니다.
+- LayoutType 형태의 프로토콜은 UICollectionViewDelegateFlowLayout로 커스텀하게 사용하고 싶을때 채택을 진행합니다.
 
 ## Snippet
 ```

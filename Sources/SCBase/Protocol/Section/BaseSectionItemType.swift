@@ -23,8 +23,9 @@ public extension BaseSectionItemLayoutType {
 }
 
 
-public protocol BaseSectionItemType: ReuseIdentifierType {
+public protocol BaseSectionItemType {
   var layout: BaseSectionItemLayoutType { get set }
+  var identifierType: ReuseIdentifierType { get set }
 }
 
 #endif

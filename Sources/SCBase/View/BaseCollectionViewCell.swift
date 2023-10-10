@@ -14,6 +14,10 @@ open class BaseCollectionViewCell: UICollectionViewCell, ViewLifeCycling, MakeLa
 
   // MARK: - Property
 
+  override open class var requiresConstraintBasedLayout: Bool {
+    return true
+  }
+  
   open var didMakeConstraints: Bool = false
 
   public static var reuseIdentifier: String {
@@ -30,7 +34,7 @@ open class BaseCollectionViewCell: UICollectionViewCell, ViewLifeCycling, MakeLa
     super.init(frame: .zero)
   }
 
-  override init(frame: CGRect) {
+  public override init(frame: CGRect) {
     defer {
       self.viewDidInit()
       self.makeLayout()

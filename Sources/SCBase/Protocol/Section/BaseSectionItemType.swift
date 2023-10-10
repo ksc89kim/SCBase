@@ -10,16 +10,15 @@
 import UIKit
 
 public protocol BaseSectionItemLayoutType {
-  func size(collectionViewSize: CGSize) -> CGSize
+  func size(collectionViewSize: CGSize, itemCount: Int) -> CGSize
 }
 
 
 public extension BaseSectionItemLayoutType {
 
-  func size(collectionViewSize: CGSize) -> CGSize {
+  func size(collectionViewSize: CGSize, itemCount: Int) -> CGSize {
     return .zero
   }
-
 }
 
 

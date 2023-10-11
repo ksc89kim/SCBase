@@ -10,7 +10,7 @@
 
 import UIKit
 
-open class BaseCollectionViewCell: UICollectionViewCell, ViewLifeCycling, MakeLayoutType, ReuseIdentifierType, BaseSectionConfigurable {
+open class BaseCollectionViewCell: UICollectionViewListCell, ViewLifeCycling, MakeLayoutType, ReuseIdentifierType, BaseSectionConfigurable {
 
   // MARK: - Property
 

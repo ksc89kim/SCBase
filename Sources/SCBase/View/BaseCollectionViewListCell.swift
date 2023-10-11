@@ -1,23 +1,24 @@
 //
-//  BaseCollectionViewCell.swift
+//  File.swift
 //  
 //
-//  Created by kim sunchul on 2022/06/04.
+//  Created by kim sunchul on 10/11/23.
 //
 
+import Foundation
 
 #if canImport(UIKit)
 
 import UIKit
 
-open class BaseCollectionViewCell: UICollectionViewCell, ViewLifeCycling, MakeLayoutType, ReuseIdentifierType, BaseSectionConfigurable {
+open class BaseCollectionViewListCell: UICollectionViewListCell, ViewLifeCycling, MakeLayoutType, ReuseIdentifierType, BaseSectionConfigurable {
 
   // MARK: - Property
 
   override open class var requiresConstraintBasedLayout: Bool {
     return true
   }
-  
+
   open var didMakeConstraints: Bool = false
 
   public static var reuseIdentifier: String {
@@ -70,4 +71,3 @@ open class BaseCollectionViewCell: UICollectionViewCell, ViewLifeCycling, MakeLa
 }
 
 #endif
-
